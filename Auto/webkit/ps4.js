@@ -218,12 +218,15 @@ function toggle_payload(pld){
 	}else if(pld == "webrte"){
 		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
 		preloadScripts(['payloads/preloader.js', 'payloads/webrte.js', 'payloads/loader.js']);
-	}
+	}else if(pld == "orbistoolbox"){
+	document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
+	preloadScripts(['payloads/preloader.js', 'payloads/orbistoolbox.js', 'payloads/loader.js']);
+    }
 	if(window.postPayload)
 		window.postPayload();
 	payload_finished(pld);
 	
-}
+    }
 
 function payload_finished(payload)
 {
