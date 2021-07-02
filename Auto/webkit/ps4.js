@@ -127,22 +127,26 @@ function setupRW() {
 
 }
 
+function load_trainer(){
+	var link = document.createElement('a');
+		  document.body.appendChild(link);
+		  link.href = 'http://night-king-host.com/Trainer/index.html';
+		  link.click();
+		  }
+
 function toggle_payload(pld){
 	if(pld == "exploit"){
 		document.getElementById("progress").innerHTML="Running Jailbreak.. Please wait!!";
 		preloadScripts(['jb/jb.js']);
-	}else if(pld == "exploit_old"){
-		document.getElementById("progress").innerHTML="Running Jailbreak.. Please wait!!";
-		preloadScripts(['jb/oldjb.js']);
 	}else if(pld == "binloader"){
 		document.getElementById("progress").innerHTML="Awaiting Payload.. Send Payload to port 9020..";
 		preloadScripts(['payloads/preloader.js', 'payloads/loader.js']);
 	}else if(pld == "mira75X"){
 		document.getElementById("progress").innerHTML="Loading MIRA.. Please wait..";
 		if(fw=="755"){
-			preloadScripts(['payloads/preloader.js', 'payloads/mira'+fw+'.js', 'payloads/loader.js']);
+			preloadScripts(['payloads/preloader.js', 'payloads/mira_755.js', 'payloads/loader.js']);
 		}else{
-			preloadScripts(['payloads/preloader'+fw+'.js', 'payloads/mira'+fw+'.js', 'payloads/loader.js']);	
+			preloadScripts(['payloads/preloader_'+fw+'.js', 'payloads/mira_'+fw+'.js', 'payloads/loader_'+fw+'.js']);	
 		}
 	}else if(pld == "mira2b"){
 		document.getElementById("progress").innerHTML="Loading MIRA + SPOOF.. Please wait..";
@@ -183,9 +187,6 @@ function toggle_payload(pld){
 	}else if(pld == "kernelclock"){
 		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
 		preloadScripts(['payloads/preloader.js', 'payloads/kernelclock.js', 'payloads/loader.js']);
-	}else if(pld == "fancontrol"){
-		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
-		preloadScripts(['payloads/preloader.js', 'payloads/fancontrol.js', 'payloads/loader.js']);
 	}else if(pld == "enablebrowser"){
 		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
 		preloadScripts(['payloads/preloader.js', 'payloads/enablebrowser.js', 'payloads/loader.js']);
@@ -198,30 +199,46 @@ function toggle_payload(pld){
 	}else if(pld == "ps4debug"){
 		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
 		preloadScripts(['payloads/preloader.js', 'payloads/ps4debug.js', 'payloads/loader.js']);
-	}else if(pld == "goldhen"){
+	}else if(pld == "goldhen11"){
 		document.getElementById("progress").innerHTML="Loading GoldHen V1.1 .. Please wait..";
 		if(fw=="755"){
-			preloadScripts(['payloads/preloader.js', 'payloads/goldhen'+fw+'.js', 'payloads/loader.js']);
+			preloadScripts(['payloads/preloader.js', 'payloads/goldhen11_755.js', 'payloads/loader.js']);
 		}else{
-			preloadScripts(['payloads/preloader'+fw+'.js', 'payloads/goldhen'+fw+'.js', 'payloads/loader.js']);	
+			preloadScripts(['payloads/preloader.js', 'payloads/goldhen11_'+fw+'.js', 'payloads/loader.js']);	
 		}
 	}else if(pld == "goldhen11b7"){
-		document.getElementById("progress").innerHTML="Loading GoldHen V1.1 B7.. Please wait..";
+		document.getElementById("progress").innerHTML="Loading GoldHen V1.1 Beta7.. Please wait..";
 		if(fw=="755"){
-			preloadScripts(['payloads/preloader.js', 'payloads/goldhen11b7_'+fw+'.js', 'payloads/loader.js']);
+			preloadScripts(['payloads/preloader.js', 'payloads/goldhen11b7_755.js', 'payloads/loader.js']);
 		}else{
-			preloadScripts(['payloads/preloader'+fw+'.js', 'payloads/goldhen11b7_'+fw+'.js', 'payloads/loader.js']);	
+			preloadScripts(['payloads/preloader.js', 'payloads/goldhen11b7_'+fw+'.js', 'payloads/loader.js']);	
 		}
-	}else if(pld == "goldhenold"){
+	}else if(pld == "goldhen10"){
 		document.getElementById("progress").innerHTML="Loading GoldHen V1.0.. Please wait..";
-		preloadScripts(['payloads/preloader.js', 'payloads/goldhen.js', 'payloads/loader.js']);
+		preloadScripts(['payloads/preloader.js', 'payloads/goldhen10.js', 'payloads/loader.js']);
 	}else if(pld == "webrte"){
 		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
 		preloadScripts(['payloads/preloader.js', 'payloads/webrte.js', 'payloads/loader.js']);
 	}else if(pld == "orbistoolbox"){
 	document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
 	preloadScripts(['payloads/preloader.js', 'payloads/orbistoolbox.js', 'payloads/loader.js']);
+    }else if(pld == "fan50"){
+	document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
+	preloadScripts(['payloads/preloader.js', 'payloads/fan50.js', 'payloads/loader.js']);	
+	}else if(pld == "fan55"){
+	document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
+	preloadScripts(['payloads/preloader.js', 'payloads/fan55.js', 'payloads/loader.js']);	
+	}else if(pld == "fan60"){
+    document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
+	preloadScripts(['payloads/preloader.js', 'payloads/fan60.js', 'payloads/loader.js']);	
+	}else if(pld == "fan65"){
+    document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
+    preloadScripts(['payloads/preloader.js', 'payloads/fan65.js', 'payloads/loader.js']);	
+    }else if(pld == "fan70"){
+	document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
+	preloadScripts(['payloads/preloader.js', 'payloads/fan70.js', 'payloads/loader.js']);	
     }
+			
 	if(window.postPayload)
 		window.postPayload();
 	payload_finished(pld);
@@ -232,7 +249,7 @@ function payload_finished(payload)
 {
 	if(payload == "binloader"){
 		setTimeout(function(){document.getElementById("progress").innerHTML="Awaiting Payload!! Send Payload To Port 9021"; }, 7000);
-	} else if(payload != "exploit" && payload != "exploit_old"){
+	} else if(payload != "exploit"){
 		setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 7.55 Payload Loaded Succesfully !!"; }, 7000);
 	}
 }
