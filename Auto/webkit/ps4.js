@@ -130,7 +130,7 @@ function setupRW() {
 function load_trainer(){
 	var link = document.createElement('a');
 		  document.body.appendChild(link);
-		  link.href = 'http://psx4trainer.000webhostapp.com/index.html';
+		  link.href = 'http://night-king.rf.gd/index.html';
 		  link.click();
 		  }
 
